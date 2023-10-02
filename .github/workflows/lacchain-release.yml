@@ -29,4 +29,4 @@ jobs:
         env:
           architecture: "amd64"
           dockerVariants: "openjdk-17"
-        run: ./gradlew --no-daemon "-Prelease.releaseVersion=${{ github.ref_name }}" "-PdockerArtifactName=lacchain-besu" "-PdockerOrgName=${{ env.REGISTRY }}/lacchain" dockerUpload -x test -x :ethereum:evmtool:dockerUpload
+        run: ./gradlew --no-daemon "-PdockerVariants=${{ env.dockerVariants }}" "-Prelease.releaseVersion=${{ github.ref_name }}" "-PdockerArtifactName=lacchain-besu" "-PdockerOrgName=${{ env.REGISTRY }}/lacchain" dockerUpload -x test -x :ethereum:evmtool:dockerUpload
