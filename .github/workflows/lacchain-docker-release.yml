@@ -1,4 +1,4 @@
-name: release lacchain-besu
+name: release lacchain-besu docker
 on:
   release:
     types: released
