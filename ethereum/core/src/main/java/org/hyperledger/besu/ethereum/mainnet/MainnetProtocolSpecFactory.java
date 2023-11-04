@@ -210,6 +210,11 @@ public class MainnetProtocolSpecFactory {
         evmConfiguration);
   }
 
+  public ProtocolSpecBuilder falcon512Definition() {
+    return Falcon512ProtocolSpecs.postQuantumDefinition(
+        chainId, contractSizeLimit, evmStackSize, isRevertReasonEnabled);
+  }
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
   // Classic Protocol Specs

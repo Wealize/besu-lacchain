@@ -371,6 +371,11 @@ public class JsonGenesisConfigOptions implements GenesisConfigOptions {
   }
 
   @Override
+  public OptionalLong getFalcon512BlockNumber() {
+    return getOptionalLong("falcon512block");
+  }
+
+  @Override
   public OptionalLong getMagnetoBlockNumber() {
     return getOptionalLong("magnetoblock");
   }
