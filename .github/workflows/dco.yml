@@ -1,11 +1,10 @@
 name: dco
 on:
   pull_request:
-  workflow_dispatch:
 
 jobs:
   dco:
-    runs-on: [besu-research-ubuntu-8]
+    runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - run: echo "This DCO job runs on pull_request event and workflow_dispatch"
