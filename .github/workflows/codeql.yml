@@ -13,18 +13,19 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ main ]
+    branches: [ lacchain_release ]
   pull_request:
-    branches: [ main ]
+    branches: [ lacchain_release ]
     paths-ignore:
       - '**/*.json'
       - '**/*.md'
       - '**/*.properties'
       - '**/*.txt'
+  workflow_dispatch:
 jobs:
   analyze:
     name: Analyze
-    runs-on: [besu-research-ubuntu-16]
+    runs-on: ubuntu-latest
     permissions:
       actions: read
       contents: read
