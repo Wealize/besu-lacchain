@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
 /** The Falcon precompiled contract. */
 public class FalconPrecompiledContract extends AbstractPrecompiledContract {
 
-  private static final Logger LOG = LoggerFactory.getLogger(AbstractBLS12PrecompiledContract.class);
+  private static final Logger LOG = LoggerFactory.getLogger(FalconPrecompiledContract.class);
 
   private static final Bytes METHOD_ABI =
       Hash.keccak256(Bytes.of("verify(bytes,bytes,bytes)".getBytes(UTF_8))).slice(0, 4);
